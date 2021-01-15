@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:file="http://www.springframework.org/schema/integration/file"
+	xmlns:int-ip="http://www.springframework.org/schema/integration/ip"
+	xmlns:int-websocket="http://www.springframework.org/schema/integration/websocket" 
+	xmlns:int-event="http://www.springframework.org/schema/integration/event"
+	xmlns:int-http="http://www.springframework.org/schema/integration/http/"
+	xmlns:task="http://www.springframework.org/schema/task" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:int-groovy="http://www.springframework.org/schema/integration/groovy"   
+	xmlns:feed="http://www.springframework.org/schema/integration/feed"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/feed https://www.springframework.org/schema/integration/feed/spring-integration-feed.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/file https://www.springframework.org/schema/integration/file/spring-integration-file.xsd
+        http://www.springframework.org/schema/integration/websocket https://www.springframework.org/schema/integration/websocket/spring-integration-websocket.xsd
+		http://www.springframework.org/schema/integration/event https://www.springframework.org/schema/integration/event/spring-integration-event.xsd
+		http://www.springframework.org/schema/integration/ip https://www.springframework.org/schema/integration/ip/spring-integration-ip.xsd
+		http://www.springframework.org/schema/integration/http http://www.springframework.org/schema/integration/http/spring-integration-http.xsd
+		http://www.springframework.org/schema/integration https://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/task https://www.springframework.org/schema/task/spring-task.xsd
+        http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/integration/groovy https://www.springframework.org/schema/integration/groovy/spring-integration-groovy.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- <context:property-placeholder location="classpath:user.properties"/> -->
+
+	<!-- 所有channel日志 -->
+	<!-- <int:wire-tap channel="logger1"/>
+	<int:logging-channel-adapter id="logger1" level="INFO" log-full-message="true"/> -->
+
+    <!-- <int:channel id="udpInChannel"> 
+        <int:interceptors>
+            <int:wire-tap channel="logger"/>
+        </int:interceptors>
+    </int:channel>
+
+    <int:logging-channel-adapter id="logger" level="WARN" log-full-message="true"/> -->
+
+	<!-- HikariCP Database bean -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+
+	<!-- HikariConfig config that is fed to above dataSource -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="poolName" value="SpringHikariPool" />
+        <property name="dataSourceClassName" value="${spring.datasource.hikari.driver-class-name}" />
+        <property name="maximumPoolSize" value="${spring.datasource.hikari.maximum-pool-size}" />
+        <property name="idleTimeout" value="${spring.datasource.hikari.idle-timeout}" />
+        <property name="autoCommit" value="${spring.datasource.hikari.auto-commit}" />
+
+        <property name="dataSourceProperties">
+            <props>
+                <prop key="url">${spring.datasource.url}</prop>
+                <prop key="user">${spring.datasource.username}</prop>
+                <prop key="password">${spring.datasource.password}</prop>
+            </props>
+        </property>
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" >
+		<property name="dataSource" ref="dataSource" />
+	</bean> 
+
+	<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="dataSource" />
+	</bean>
+
+</beans>

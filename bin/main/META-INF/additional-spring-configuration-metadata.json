@@ -1,0 +1,52 @@
+{"properties": [
+  {
+    "name": "status.sample.id",
+    "type": "java.lang.String",
+    "description": "A description for 'status.sample.id'"
+  },
+  {
+    "name": "status.sample.text",
+    "type": "java.lang.String",
+    "description": "A description for 'status.sample.text'"
+  },
+  {
+    "name": "status.sample.order",
+    "type": "java.lang.String",
+    "description": "A description for 'status.sample.order'"
+  },
+  {
+    "name": "status.job.order",
+    "type": "java.lang.String",
+    "description": "A description for 'status.job.order'"
+  },
+  {
+    "name": "status.job.text",
+    "type": "java.lang.String",
+    "description": "A description for 'status.job.text'"
+  },
+  {
+    "name": "status.job.id",
+    "type": "java.lang.String",
+    "description": "A description for 'status.job.id'"
+  },
+  {
+    "name": "status.sq.id",
+    "type": "java.lang.String",
+    "description": "A description for 'status.sq.id'"
+  },
+  {
+    "name": "status.sq.text",
+    "type": "java.lang.String",
+    "description": "A description for 'status.sq.text'"
+  },
+  {
+    "name": "status.sq.order",
+    "type": "java.lang.String",
+    "description": "A description for 'status.sq.order'"
+  },
+  {
+    "name": "exclude.person",
+    "type": "java.lang.String",
+    "description": "A description for 'exclude.person'"
+  }
+]}

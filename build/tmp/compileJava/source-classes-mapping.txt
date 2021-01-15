@@ -1,0 +1,40 @@
+smartlims/testresultmgtsvc/datamanager/AliquotInfo.java
+ smartlims.testresultmgtsvc.datamanager.AliquotInfo
+smartlims/testresultmgtsvc/datamanager/InstSubstanceInfo.java
+ smartlims.testresultmgtsvc.datamanager.InstSubstanceInfo
+smartlims/testresultmgtsvc/datamanager/LookupBriefItem.java
+ smartlims.testresultmgtsvc.datamanager.LookupBriefItem
+smartlims/testresultmgtsvc/service/QueryService.java
+ smartlims.testresultmgtsvc.service.QueryService
+smartlims/testresultmgtsvc/datamanager/JobInfo.java
+ smartlims.testresultmgtsvc.datamanager.JobInfo
+smartlims/testresultmgtsvc/datamanager/DataByProp.java
+ smartlims.testresultmgtsvc.datamanager.DataByProp
+smartlims/testresultmgtsvc/datamanager/LookupCollection.java
+ smartlims.testresultmgtsvc.datamanager.LookupCollection
+smartlims/testresultmgtsvc/TestresultmgtsvcApplication.java
+ smartlims.testresultmgtsvc.TestresultmgtsvcApplication
+smartlims/testresultmgtsvc/utils/DateUtils.java
+ smartlims.testresultmgtsvc.utils.DateUtils
+smartlims/testresultmgtsvc/datamanager/ResultPackage_JSON.java
+ smartlims.testresultmgtsvc.datamanager.ResultPackage_JSON
+smartlims/testresultmgtsvc/controller/QueryController.java
+ smartlims.testresultmgtsvc.controller.QueryController
+smartlims/testresultmgtsvc/enums/ResultEnums.java
+ smartlims.testresultmgtsvc.enums.ResultEnums
+smartlims/testresultmgtsvc/datamanager/InstrumentInfo.java
+ smartlims.testresultmgtsvc.datamanager.InstrumentInfo
+smartlims/testresultmgtsvc/datamanager/SampleInfo.java
+ smartlims.testresultmgtsvc.datamanager.SampleInfo
+smartlims/testresultmgtsvc/utils/PropUtils.java
+ smartlims.testresultmgtsvc.utils.PropUtils
+smartlims/testresultmgtsvc/datamanager/LookupPassItem.java
+ smartlims.testresultmgtsvc.datamanager.LookupPassItem
+smartlims/testresultmgtsvc/utils/LookupItemUtils.java
+ smartlims.testresultmgtsvc.utils.LookupItemUtils
+smartlims/testresultmgtsvc/service/impl/QueryServiceImpl.java
+ smartlims.testresultmgtsvc.service.impl.QueryServiceImpl
+smartlims/testresultmgtsvc/datamanager/LookupStateItem.java
+ smartlims.testresultmgtsvc.datamanager.LookupStateItem
+smartlims/testresultmgtsvc/datamanager/LookupItem.java
+ smartlims.testresultmgtsvc.datamanager.LookupItem
